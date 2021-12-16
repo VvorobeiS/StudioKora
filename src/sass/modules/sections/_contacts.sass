@@ -1,0 +1,125 @@
+.contacts
+  padding-top: 92px
+  padding-bottom: 67px
+  background-color: #F0ECE3
+  &__container
+    display: flex
+    align-items: center
+    flex-direction: column
+    width: 935px
+    margin: 0 auto
+  &__title
+    position: relative
+    margin-bottom: 58px
+    font-family: $Cormorant-Garamond
+    font-style: normal
+    font-weight: 500
+    font-size: 38px
+    line-height: 46px
+    text-align: center
+    letter-spacing: 2px
+    text-transform: uppercase
+    color: $dark-color
+    &:before
+      content: ''
+      position: absolute
+      left: 50%
+      bottom: -20px
+      transform: translateX(-50%)
+      width: 127px
+      height: 3px
+      background-color: #CCBB9E
+  &__text
+    margin-bottom: 43px
+    font-family: $Roboto
+    font-style: normal
+    font-weight: normal
+    font-size: 16px
+    line-height: 28px
+    letter-spacing: 1px
+    color: #818181
+  &__form
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: 100%
+    &-inputs
+      width: 100%
+      display: flex
+      justify-content: space-between
+      align-items: center
+      margin-bottom: 39px
+    &-input
+      width: 443px
+      padding-bottom: 13px
+      padding-left: 40px
+      font-family: $Roboto
+      font-style: normal
+      font-weight: normal
+      font-size: 16px
+      line-height: 28px
+      letter-spacing: 1px
+      background-color: transparent
+      color: #5F5D65
+      border: none
+      border-bottom: 1px solid #4B4A50
+      outline: none
+      &--name
+        background: url(/assets/images/person.svg) 0 30% no-repeat
+      &--phone
+        background: url(/assets/images/phone.svg) 0 30% no-repeat
+    &-checkbox
+      position: relative
+      margin-bottom: 26px
+    &-label
+      position: relative
+      display: flex
+      font-family: $Roboto
+      font-style: normal
+      font-weight: normal
+      font-size: 12px
+      line-height: 28px
+      letter-spacing: 0.5px
+      color: #818181
+      cursor: pointer
+      &:before
+        content: ''
+        top: 0
+        left: 0
+        display: inline-block
+        width: 25px
+        height: 25px
+        margin-right: 14px
+        background-color: $light-color
+        transition: .1s ease
+    &-link
+      font-family: inherit
+      font-style: inherit
+      font-weight: inherit
+      font-size: inherit
+      line-height: inherit
+      letter-spacing: inherit
+      color: inherit
+      text-decoration: underline
+    &-control
+      position: absolute
+      top: 0
+      left: 0
+      visibility: hidden
+      width: 25px
+      height: 25px
+    &-btn
+      padding: 12px 39px
+      font-family: $Roboto
+      font-style: normal
+      font-weight: normal
+      font-size: 14px
+      line-height: 30px
+      text-align: center
+      text-transform: uppercase
+      background-color: transparent
+      color: #4B4A50
+      border: 1px solid #CCBB9E
+
+.contacts__form-control:checked + .contacts__form-label:before
+  background: #C4B192 url(/assets/images/check.svg) center no-repeat

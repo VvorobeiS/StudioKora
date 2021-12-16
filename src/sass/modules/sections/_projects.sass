@@ -1,0 +1,81 @@
+.projects
+  padding-top: 124px
+  padding-bottom: 103px
+  &__title
+    position: relative
+    margin-bottom: 75px
+    font-family: $Cormorant-Garamond
+    font-style: normal
+    font-weight: 500
+    font-size: 38px
+    line-height: 46px
+    text-align: center
+    letter-spacing: 2px
+    text-transform: uppercase
+    color: $dark-color
+    &:before
+      content: ''
+      position: absolute
+      left: 50%
+      transform: translateX(-50%)
+      bottom: -20px
+      width: 127px
+      height: 3px
+      background-color: rgba(215, 174, 122, 0.58)
+  &__slider
+    position: relative
+    max-width: 1920px
+    &-slide
+      display: flex
+      flex-direction: column
+      align-items: start
+      width: 68%
+      margin: 0 50px
+    &-link
+      display: block
+      text-decoration: none
+      margin-bottom: 36px
+    &-text
+      margin-bottom: 12px
+      font-family: $Pt-Sans
+      font-style: normal
+      font-weight: normal
+      font-size: 12px
+      line-height: 128%
+      letter-spacing: 2px
+      text-transform: uppercase
+      color: $dark-color
+      &--bold
+        font-weight: bold
+        color: #BF9C62
+    &-title
+      font-family: $Cormorant-Garamond
+      font-style: normal
+      font-weight: normal
+      font-size: 42px
+      line-height: 51px
+      letter-spacing: 2px
+    &-btn
+      position: absolute
+      top: 40%
+      transform: translateY(40%)
+      display: flexs
+      align-items: center
+      justify-content: center
+      background-color: transparent
+      border: none
+      fill: none
+      stroke: #424B5A99
+      z-index: 100
+      &--prev
+        left: 242px
+      &--next
+        right: 242px
+      +hover
+        stroke: #CCBB9E
+
+.swiper-slide-prev, .swiper-slide-next
+  transition: .8s ease
+  opacity: .4
+.swiper-slide-prev>.projects__slider-info, .swiper-slide-next>.projects__slider-info
+  opacity: 0
