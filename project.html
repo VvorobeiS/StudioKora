@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=PT+Sans:wght@400;700&family=Roboto:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <title>StudioKora</title>
+  </head>
+  <body>
+    <div class="body">
+      <header class="header header--sticky">
+        <div class="header__container" data-aos="fade-down" data-aos-duration="1500">
+          <a href="#!" class="header__logo">
+            <img src="./assets/images/logo-black.svg" data-img="./assets/images/logo-black.svg" alt="Логотип" />
+          </a>
+          <div class="header-burger">
+            <span class="header-burger__line header-burger__line--one"></span>
+            <span class="header-burger__line header-burger__line--two"></span>
+            <span class="header-burger__line header-burger__line--three"></span>
+          </div>
+          <!-- /.header-burger -->
+          <nav class="header__nav header-nav header-nav--project">
+            <ul class="header-nav__list">
+              <li class="header-nav__list-item">
+                <a href="#!" class="header-nav__list-link header-nav__list-link--grey">О компании</a>
+              </li>
+              <li class="header-nav__list-item">
+                <a href="#!" class="header-nav__list-link header-nav__list-link--grey">Архитектура</a>
+              </li>
+              <li class="header-nav__list-item">
+                <a href="#!" class="header-nav__list-link header-nav__list-link--grey">Дизайн интерьера</a>
+              </li>
+              <li class="header-nav__list-item">
+                <span class="header-nav__list-page">Галерея</span>
+              </li>
+              <li class="header-nav__list-item">
+                <a href="#!" class="header-nav__list-link header-nav__list-link--grey">Сотрудничество</a>
+              </li>
+              <li class="header-nav__list-item">
+                <a href="#!" class="header-nav__list-link header-nav__list-link--grey">Контакты</a>
+              </li>
+            </ul>
+            <div class="header-contacts">
+              <span class="header-contacts__adress">Сакнкт-петербург, ул. зверинская 33, офис 13</span>
+              <ul class="header-contacts__list">
+                <li class="header-contacts__list-item">
+                  <a href="" class="header-contacts__list-link">
+                    <img src="./assets/images/facebook.svg" alt="Иконка: facebook" class="header-contacts__list-icon"
+                  /></a>
+                </li>
+                <li class="header-contacts__list-item">
+                  <a href="" class="header-contacts__list-link">
+                    <img src="./assets/images/youtube.svg" alt="Иконка: youtube" class="header-contacts__list-icon"
+                  /></a>
+                </li>
+                <li class="header-contacts__list-item">
+                  <a href="" class="header-contacts__list-link">
+                    <img src="./assets/images/instagram.svg" alt="Иконка: instagram" class="header-contacts__list-icon"
+                  /></a>
+                </li>
+              </ul>
+            </div>
+            <!-- /.header-contacts -->
+          </nav>
+          <div class="header__wrapper">
+            <button class="header__btn">
+              <svg class="header__btn-icon" width="16" height="16" fill="none">
+                <circle cx="6.269" cy="6.769" r="5.769" stroke="#757470" />
+                <path stroke="#757470" d="m10.026 10.893 4.703 4.702" />
+              </svg>
+            </button>
+            <a href="tel:78126459810" class="header__phone header__phone--dark header__phone--desktop"
+              ><span>+7 (812)</span> 645 98 10</a
+            >
+            <a href="tel:78126459810" class="header__phone header__phone--mobile"
+              ><img src="./assets/images/phone-header.svg" alt="Иконка: Телефон" class="header__phone-icon"
+            /></a>
+          </div>
+          <!-- /.header__wrapper -->
+        </div>
+        <!-- /.header__container -->
+      </header>
+      <main class="main">
+        <section class="project">
+          <div class="project__container">
+            <h2 class="project__subtitle">Главная <span>Вилла Валентина</span></h2>
+            <h1 class="project__title" data-aos="flip-up" data-aos-duration="1500">Заголовок страницы</h1>
+            <p class="project__description">
+              Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum
+              используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное
+              распределение букв и пробелов в абзацах, которое не получается при простой дубликации
+            </p>
+            <img
+              src="./assets/images/slide-1.jpg"
+              alt="Изображение проекта"
+              class="project__img"
+              data-aos="fade-up"
+              data-aos-duration="1200"
+            />
+          </div>
+          <!-- /.project__container -->
+        </section>
+        <!-- /.project -->
+      </main>
+    </div>
+    <!-- /.body -->
+    <script src="./src/js/aos.js"></script>
+    <script src="./src/js/swiper-bundle.min.js"></script>
+    <script src="./src/js/main.js"></script>
+  </body>
+</html>

@@ -1,3 +1,4 @@
+// Инициализация слайдера
 projectsSlider = new Swiper('.projects__slider', {
   loop: !0,
   loopedSlides: 20,
@@ -15,6 +16,7 @@ projectsSlider = new Swiper('.projects__slider', {
   }
 });
 
+// Активируем меню-бургер
 const toggleMenu = () => {
   const body = document.querySelector('body'),
     headerContainer = document.querySelector('.header__container'),
@@ -48,29 +50,35 @@ const toggleHeader = () => {
   document.addEventListener('scroll', () => {
     let scrolled = window.pageYOffset;
     if (scrolled >= offset) {
-      header.style.marginBottom = `${headerHeight}px`;
-      header.classList.add('header--fixed');
-      headerLogo.src = './assets/images/logo-black.svg';
-      headerNavLink.forEach((item) => {
-        item.classList.add('header-nav__list-link--fixed');
-      });
-      burgerLine.forEach((item) => {
-        item.classList.add('header-burger__line--fixed');
-      });
-      headerPhone.classList.add('header__phone--fixed');
+      if (!header.matches('.header--sticky')) {
+        header.style.marginBottom = `${headerHeight}px`;
+        header.classList.add('header--fixed');
+        headerLogo.src = './assets/images/logo-black.svg';
+        headerNavLink.forEach((item) => {
+          item.classList.add('header-nav__list-link--fixed');
+        });
+        burgerLine.forEach((item) => {
+          item.classList.add('header-burger__line--fixed');
+        });
+        headerPhone.classList.add('header__phone--fixed');
+      }
     } else if (scrolled <= offset) {
-      header.style.marginBottom = '0px';
-      header.classList.remove('header--fixed');
-      headerLogo.src = './assets/images/logo-white.svg';
-      headerNavLink.forEach((item) => {
-        item.classList.remove('header-nav__list-link--fixed');
-      });
-      burgerLine.forEach((item) => {
-        item.classList.remove('header-burger__line--fixed');
-      });
-      headerPhone.classList.remove('header__phone--fixed');
+      if (!header.matches('.header--sticky')) {
+        header.style.marginBottom = '0px';
+        header.classList.remove('header--fixed');
+        headerLogo.src = './assets/images/logo-white.svg';
+        headerNavLink.forEach((item) => {
+          item.classList.remove('header-nav__list-link--fixed');
+        });
+        burgerLine.forEach((item) => {
+          item.classList.remove('header-burger__line--fixed');
+        });
+        headerPhone.classList.remove('header__phone--fixed');
+      }
     }
   });
 };
 
 toggleHeader();
+
+AOS.init();
