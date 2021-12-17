@@ -1,18 +1,42 @@
 .header
   position: absolute
-  top: 83px
+  top: 52px
   right: 0
   left: 0
-  z-index: 1
+  z-index: 10
+  transition: background-color 1s ease
+  &--fixed
+    position: fixed
+    top: 0 !important
+    background-color: $light-color
+    box-shadow: 0px 10px 10px 0px rgba(204, 203, 198, 0.2)
   &__container
+    position: relative
     display: flex
     justify-content: space-between
     align-items: end
-    padding-right: 126px
-    padding-left: 95px
+    padding: 31px 106px 31px 97px
+    &:before
+      content: ''
+      position: absolute
+      bottom: 0
+      left: 50%
+      transform: translateX(-50%)
+      width: 0
+      height: 1px
+      background-color: rgba(20, 18, 21, 0.2)
+      z-index: 1
+      transition: 1.5s ease
+    &--mobile
+      &:before
+        width: 90%
   &__logo
     display: block
+    transition: .3s ease
+    +hover
+      transform: scale(1.1)
   &__phone
+    position: relative
     font-family: $Roboto
     font-style: normal
     font-weight: normal
@@ -22,18 +46,85 @@
     text-decoration: none
     text-transform: uppercase
     color: $light-color
+    transition: .3s ease
+    &--desktop
+      &:before
+        content: ''
+        position: absolute
+        top: -20px
+        left: 0
+        right: 0
+        height: 1px
+        background-color: transparent
+        transition: .3s ease
+      &:after
+        content: ''
+        position: absolute
+        bottom: -20px
+        left: 0
+        right: 0
+        height: 1px
+        background-color: transparent
+        transition: 0.3s ease
+      +hover
+        &:before
+          background-color: $light-color
+          top: -2px
+        &:after
+          bottom: -2px
+          background-color: $light-color
+    &--mobile
+      display: none
+    &--fixed
+      color: $dark-color
+      +hover
+        color: #8F6B2D
+        &:before
+          background-color: #8F6B2D
+        &:after
+          background-color: #8F6B2D
+    &-icon
+      display: block
+  &-burger
+    display: none
+    &__line
+      height: 2px
+      background-color: #B1AFA9
+      &--one
+        width: 21px
+      &--two
+        width: 24px
+      &--three
+        width: 29px
+      &--fixed
+        background-color: $dark-color
+    &--active
+      position: relative
+      width: 29px
+      &>.header-burger__line
+        position: absolute
+        background-color: #141215
+        transition: .5s ease
+        &--one
+          top: calc(50% - 1px)
+          transform: rotate(45deg)
+          width: 29px
+        &--two
+          display: none
+        &--three
+          top: calc(50% - 1px)
+          transform: rotate(-45deg)
   &-nav
     flex: 1 1 auto
     &__list
       display: flex
-      justify-content: space-between
+      justify-content: center
       align-items: center
-      list-style: none
-      margin: 0
-      padding: 0
-      padding-left: 164px
-      padding-right: 226px
+      &-item
+        &:not(:last-child)
+          margin-right: 3%
       &-link
+        position: relative
         font-family: $Roboto
         font-style: normal
         font-weight: normal
@@ -43,3 +134,50 @@
         text-decoration: none
         text-transform: uppercase
         color: #CCCBC6
+        transition: .3s ease
+        &:before
+          content: ''
+          position: absolute
+          left: 0
+          bottom: -2px
+          width: 0
+          height: 1px
+          background-color: $light-color
+          transition: .3s ease
+        +hover
+          color: $light-color
+          &:before
+            width: 100%
+        &--fixed
+          color: $dark-color
+          &:before
+            background-color: #8F6B2D
+          +hover
+            color: #8F6B2D
+  &-contacts
+    display: none
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    &--active
+      display: flex
+    &__adress
+      margin-bottom: 18px
+      font-family: $Roboto
+      font-style: normal
+      font-weight: normal
+      font-size: 10px
+      line-height: 28px
+      text-align: center
+      letter-spacing: 0.3px
+      text-transform: uppercase
+      color: #141215
+    &__list
+      display: flex
+      &-item
+        &:not(:last-child)
+          margin-right: 19px
+      &-link
+        display: block
+      &-icon
+        display: block

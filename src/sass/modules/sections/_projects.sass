@@ -29,8 +29,8 @@
       display: flex
       flex-direction: column
       align-items: start
-      width: 68%
-      margin: 0 50px
+      width: 69%
+      margin: 0 70px
     &-link
       display: block
       text-decoration: none
@@ -57,22 +57,28 @@
       letter-spacing: 2px
     &-btn
       position: absolute
-      top: 40%
-      transform: translateY(40%)
-      display: flexs
+      top: 42%
+      transform: translateY(-42%)
+      display: flex
       align-items: center
       justify-content: center
       background-color: transparent
+      width: 42px
       border: none
       fill: none
       stroke: #424B5A99
       z-index: 100
+      transition: .3s ease
       &--prev
-        left: 242px
+        left: 11%
       &--next
-        right: 242px
+        right: 11%
       +hover
         stroke: #CCBB9E
+    &-icon
+      width: 100%
+      &--next
+        transform: rotate(180deg)
 
 .swiper-slide-prev, .swiper-slide-next
   transition: .8s ease
