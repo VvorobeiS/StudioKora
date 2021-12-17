@@ -24,5 +24,9 @@
   "bugs": {
     "url": "https://github.com/VvorobeiS/StudioKora/issues"
   },
-  "homepage": "https://github.com/VvorobeiS/StudioKora#readme"
+  "homepage": "https://github.com/VvorobeiS/StudioKora#readme",
+  "dependencies": {
+    "aos": "^2.3.4",
+    "swiper": "^7.3.3"
+  }
 }

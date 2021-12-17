@@ -1,5 +1,7 @@
 // Инициализация слайдера
-projectsSlider = new Swiper('.projects__slider', {
+import Swiper, { Navigation } from 'swiper';
+Swiper.use([Navigation]);
+const projectsSlider = new Swiper('.projects__slider', {
   loop: !0,
   loopedSlides: 20,
   observer: !0,
@@ -16,8 +18,8 @@ projectsSlider = new Swiper('.projects__slider', {
   }
 });
 
+// Закрепляем панель навигации при скролле
 const toggleHeader = () => {
-  // Закрепляем панель навигации при скролле
   const header = document.querySelector('.header'),
     headerLogo = document.querySelector('.header__logo>img'),
     headerNavLink = document.querySelectorAll('.header-nav__list-link'),
@@ -60,6 +62,7 @@ const toggleHeader = () => {
 
 toggleHeader();
 
+// Активируем меню бургер
 const toggleMenu = () => {
   const body = document.querySelector('body'),
     headerContainer = document.querySelector('.header__container'),
@@ -79,5 +82,3 @@ const toggleMenu = () => {
 };
 
 toggleMenu();
-
-AOS.init();

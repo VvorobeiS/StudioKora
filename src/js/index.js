@@ -1,3 +1,5 @@
-import './modules/aos';
-import './modules/swiper-bundle.min';
-import './modules/main';
+import AOS from 'aos';
+import './modules/script';
+
+// Инициализируем SAOS
+AOS.init();
