@@ -16,27 +16,6 @@ projectsSlider = new Swiper('.projects__slider', {
   }
 });
 
-// Активируем меню-бургер
-const toggleMenu = () => {
-  const body = document.querySelector('body'),
-    headerContainer = document.querySelector('.header__container'),
-    headerBurger = document.querySelector('.header-burger'),
-    headerNav = document.querySelector('.header-nav'),
-    headerLogo = document.querySelector('.header__logo>img'),
-    headerContacts = document.querySelector('.header-contacts');
-
-  headerBurger.addEventListener('click', () => {
-    headerBurger.classList.toggle('header-burger--active');
-    headerContainer.classList.toggle('header__container--mobile');
-    headerNav.classList.toggle('header-nav--active');
-    [headerLogo.src, headerLogo.dataset.img] = [headerLogo.dataset.img, headerLogo.src];
-    headerContacts.classList.toggle('header-contacts--active');
-    body.classList.toggle('hidden');
-  });
-};
-
-toggleMenu();
-
 const toggleHeader = () => {
   // Закрепляем панель навигации при скролле
   const header = document.querySelector('.header'),
@@ -80,5 +59,25 @@ const toggleHeader = () => {
 };
 
 toggleHeader();
+
+const toggleMenu = () => {
+  const body = document.querySelector('body'),
+    headerContainer = document.querySelector('.header__container'),
+    headerBurger = document.querySelector('.header-burger'),
+    headerNav = document.querySelector('.header-nav'),
+    headerLogo = document.querySelector('.header__logo>img'),
+    headerContacts = document.querySelector('.header-contacts');
+
+  headerBurger.addEventListener('click', () => {
+    headerBurger.classList.toggle('header-burger--active');
+    headerContainer.classList.toggle('header__container--mobile');
+    headerNav.classList.toggle('header-nav--active');
+    [headerLogo.src, headerLogo.dataset.img] = [headerLogo.dataset.img, headerLogo.src];
+    headerContacts.classList.toggle('header-contacts--active');
+    body.classList.toggle('hidden');
+  });
+};
+
+toggleMenu();
 
 AOS.init();
