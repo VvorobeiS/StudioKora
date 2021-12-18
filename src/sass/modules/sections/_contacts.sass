@@ -65,9 +65,9 @@
       border-bottom: 1px solid #4B4A50
       outline: none
       &--name
-        background: url(/assets/images/person.svg) 0 30% no-repeat
+        background: url(../images/person.svg) 0 30% no-repeat
       &--phone
-        background: url(/assets/images/phone.svg) 0 30% no-repeat
+        background: url(../images/phone.svg) 0 30% no-repeat
     &-checkbox
       position: relative
       margin-bottom: 26px
@@ -78,6 +78,7 @@
     &-label
       position: relative
       display: flex
+      align-items: center
       font-family: $Roboto
       font-style: normal
       font-weight: normal
@@ -92,6 +93,7 @@
         left: 0
         display: inline-block
         width: 28px
+        height: 28px
         margin-right: 14px
         background-color: $light-color
         transition: .1s ease
@@ -131,4 +133,4 @@
         background-color: #CCBB9E
 
 .contacts__form-control:checked + .contacts__form-label:before
-  background: #C4B192 url(/assets/images/check.svg) center no-repeat
+  background: #C4B192 url(../images/check.svg) center no-repeat
